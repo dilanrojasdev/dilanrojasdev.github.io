@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto de Dilan Fabián Rojas Pérez: correo, LinkedIn y formulario.">
+  <meta name="author" content="Dilan Fabián Rojas Pérez">
+  <title>Contacto · Dilan Rojas</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado con el menú de navegación (igual en todas las páginas) -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><span class="logo__marca">DR</span>Dilan Rojas</a>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="experiencia.html">Experiencia</a></li>
+          <li><a href="formacion.html">Formación</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <button class="boton-icono boton-tema" type="button" aria-label="Cambiar a tema claro">☀</button>
+        <a class="boton boton--principal boton--pequeno boton--linkedin" href="https://www.linkedin.com/in/dilanrojasperez" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="boton-icono boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor contacto">
+      <div class="revelar">
+        <span class="etiqueta">// Contacto</span>
+        <h1>¿Hablamos?</h1>
+        <p>¿Tienes un proceso manual que quieras automatizar o una vacante en la que pueda aportar? <strong>Escríbeme</strong> y te respondo pronto.</p>
+        <ul class="lista-contacto">
+          <li><a href="mailto:dilanfabianrojas@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span><small>correo</small>dilanfabianrojas@gmail.com</span></a></li>
+          <li><a href="https://www.linkedin.com/in/dilanrojasperez" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 10v7M7 7v.01M11 17v-7m0 3a3 3 0 0 1 6 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span><small>linkedin</small>linkedin.com/in/dilanrojasperez</span></a></li>
+          <li><div><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg><span><small>ubicación</small>Bogotá, Colombia</span></div></li>
+        </ul>
+      </div>
+
+      <!-- Formulario: envía los datos con el método GET a la página gracias.html -->
+      <form class="formulario tarjeta revelar" action="gracias.html" method="get">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame en qué te puedo ayudar" required></textarea>
+
+        <button class="boton boton--principal" type="submit">Enviar mensaje →</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© <span id="anio">2026</span> Dilan Fabián Rojas Pérez · Hecho a mano con HTML, CSS y JavaScript</p>
+      <p>
+        <a href="https://www.linkedin.com/in/dilanrojasperez" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dilanfabianrojas@gmail.com">Correo</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

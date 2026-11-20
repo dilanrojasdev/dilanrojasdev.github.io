@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyectos de automatización y software desarrollados por Dilan Fabián Rojas Pérez.">
+  <meta name="author" content="Dilan Fabián Rojas Pérez">
+  <title>Proyectos · Dilan Rojas</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado con el menú de navegación (igual en todas las páginas) -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><span class="logo__marca">DR</span>Dilan Rojas</a>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="experiencia.html">Experiencia</a></li>
+          <li><a href="formacion.html">Formación</a></li>
+          <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <button class="boton-icono boton-tema" type="button" aria-label="Cambiar a tema claro">☀</button>
+        <a class="boton boton--principal boton--pequeno boton--linkedin" href="https://www.linkedin.com/in/dilanrojasperez" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="boton-icono boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor">
+      <div class="intro revelar">
+        <span class="etiqueta">// Proyectos</span>
+        <h1>Lo que he construido</h1>
+        <p>Soluciones reales que hoy ahorran tiempo y evitan errores. Por confidencialidad se describen <em>sin datos de la empresa</em>.</p>
+      </div>
+
+      <article class="tarjeta proyecto revelar">
+        <img src="img/proyecto-fx.svg" alt="Ilustración de un tablero con gráfica de líneas" width="400" height="220">
+        <div>
+          <span class="proyecto__tipo">Automatización · En producción</span>
+          <h2>Tablero de exposición cambiaria</h2>
+          <h3>// Problema</h3>
+          <p>Cada corte de la posición en dólares se armaba a mano, en unos 20 minutos, transcribiendo cifras de siete fuentes y sin historial entre cortes.</p>
+          <h3>// Qué hice</h3>
+          <ul class="lista-logros">
+              <li>Lector en Python de los archivos de Tesorería (siempre en solo lectura), del ERP y de la TRM oficial.</li>
+              <li>Reglas de calidad que <strong>detienen la publicación</strong> si un dato no cuadra, en lugar de mostrar una cifra dudosa.</li>
+              <li>Tarea programada cada hora y publicación en un enlace permanente que se abre desde el celular.</li>
+          </ul>
+          <h3>// Resultado</h3>
+          <p><strong>13 actualizaciones automáticas</strong> por día hábil, protegidas por más de 60 pruebas automatizadas.</p>
+          <hr class="separador">
+          <div class="chips"><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">JavaScript</span><span class="chip">PowerShell</span><span class="chip">Playwright</span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta proyecto revelar">
+        <img src="img/proyecto-cero-papel.svg" alt="Ilustración de un documento con código de barras pasando a una carpeta digital" width="400" height="220">
+        <div>
+          <span class="proyecto__tipo">Gestión documental · Prototipo</span>
+          <h2>Programa Cero Papel</h2>
+          <h3>// Problema</h3>
+          <p>Servicio al Cliente busca a mano en el archivo físico facturas, remesas y soportes de entrega cada vez que atiende un caso.</p>
+          <h3>// Qué hice</h3>
+          <ul class="lista-logros">
+              <li>Clasificación de los documentos según su tratamiento legal: cuáles dejar de imprimir, cuáles digitalizar y cuáles conservar.</li>
+              <li>Identificación por <strong>código de barras</strong> en lugar de OCR, y bitácora con huella SHA-256 según la <em>Ley 527 de 1999</em>.</li>
+              <li>Prototipo con arquitectura por capas (puertos y adaptadores), probado con datos sintéticos.</li>
+          </ul>
+          <h3>// Resultado</h3>
+          <p><strong>75 % de identificación automática</strong> en el lote de prueba y 23 pruebas automatizadas.</p>
+          <hr class="separador">
+          <div class="chips"><span class="chip">Python</span><span class="chip">pyzbar</span><span class="chip">PostgreSQL</span><span class="chip">pytest</span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta proyecto revelar">
+        <img src="img/proyecto-facturas.svg" alt="Ilustración de facturas con un calendario de vencimientos" width="400" height="220">
+        <div>
+          <span class="proyecto__tipo">Finanzas · En desarrollo</span>
+          <h2>Automatización de facturas</h2>
+          <h3>// Problema</h3>
+          <p>Revisar la bandeja de facturas electrónicas, descargarlas, nombrarlas y vigilar sus vencimientos se hacía a mano.</p>
+          <h3>// Qué hice</h3>
+          <ul class="lista-logros">
+              <li>Cálculo de la fecha límite de cada factura según la regla de pago del proveedor.</li>
+              <li>Aviso diario con las facturas que vencen hoy, las próximas y las vencidas.</li>
+              <li>Lectura de la bandeja con sesión reutilizable y carga <strong>sin duplicados</strong> en una base de datos local.</li>
+          </ul>
+          <h3>// Resultado</h3>
+          <p>Fases 1 a 3 terminadas y 21 pruebas unitarias.</p>
+          <hr class="separador">
+          <div class="chips"><span class="chip">Python</span><span class="chip">Playwright</span><span class="chip">SQLite</span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta proyecto revelar">
+        <img src="img/proyecto-panel.svg" alt="Ilustración de una página web interna con tres módulos" width="400" height="220">
+        <div>
+          <span class="proyecto__tipo">Herramienta web interna</span>
+          <h2>Panel SAC</h2>
+          <h3>// Problema</h3>
+          <p>En Servicio al Cliente, el cruce de manifiestos, la validación de facturas y la relación de recibos se hacían a mano en Excel.</p>
+          <h3>// Qué hice</h3>
+          <ul class="lista-logros">
+              <li>Página web propia con tres módulos: cruce de manifiestos, validador de facturas y relación de recibos.</li>
+              <li>Verificación del <strong>NIT</strong> con el algoritmo del dígito de verificación de la DIAN.</li>
+          </ul>
+          <h3>// Resultado</h3>
+          <p>Tres tareas manuales reunidas en una sola herramienta que corre en el navegador.</p>
+          <hr class="separador">
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">SheetJS</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta proyecto revelar">
+        <img src="img/proyecto-descargas.svg" alt="Ilustración de descargas automáticas de archivos" width="400" height="220">
+        <div>
+          <span class="proyecto__tipo">RPA</span>
+          <h2>Descarga masiva de facturas</h2>
+          <h3>// Problema</h3>
+          <p>Las facturas se descargaban una por una desde los portales de los clientes, y los adjuntos del correo a mano.</p>
+          <h3>// Qué hice</h3>
+          <ul class="lista-logros">
+              <li>Descarga masiva desde los portales de Falabella y Éxito.</li>
+              <li>Descarga automática de adjuntos en Outlook y conciliación de facturas en Excel con macros.</li>
+          </ul>
+          <h3>// Resultado</h3>
+          <p>El proceso dejó de hacerse <em>uno por uno</em>.</p>
+          <hr class="separador">
+          <div class="chips"><span class="chip">RPA</span><span class="chip">Excel</span><span class="chip">Outlook</span></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© <span id="anio">2026</span> Dilan Fabián Rojas Pérez · Hecho a mano con HTML, CSS y JavaScript</p>
+      <p>
+        <a href="https://www.linkedin.com/in/dilanrojasperez" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dilanfabianrojas@gmail.com">Correo</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
