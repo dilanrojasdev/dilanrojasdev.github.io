@@ -313,7 +313,7 @@ img { max-width: 100%; display: block; }
 .ventana__cuerpo { padding: 1.5rem; }
 
 .perfil { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
-.perfil img { width: 64px; height: 64px; border-radius: 14px; }
+.perfil img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--acento); }
 .perfil h3 { font-size: 1.05rem; }
 .perfil p { font-size: 0.85rem; color: var(--tenue); }
 
